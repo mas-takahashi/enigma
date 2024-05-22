@@ -2,6 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\enigmaController;
+
+Route::get('/enigma', [enigmaController::class, 'enigma']);
+Route::post('/encrypt', [enigmaController::class, 'encrypt']);
+Route::post('/decrypt', [enigmaController::class, 'decrypt']);
+Route::get('/db', [enigmaController::class, 'db']);
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
